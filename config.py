@@ -1,0 +1,5 @@
+DATABASE='imagedb'
+USER='docker'
+PASSWORD='docker'
+HOST='localhost'
+PORT='5000'
