@@ -1,4 +1,6 @@
 services:
+
+
   database:
     image: postgres:14.1-alpine
     restart: always
@@ -6,6 +8,7 @@ services:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=docker
       - POSTGRES_DB=imagedb
+
     ports:
       - 5000:5432
 
@@ -16,3 +19,10 @@ services:
       - database
     ports:
       - 5001:8080
+
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
