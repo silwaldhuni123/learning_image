@@ -11,9 +11,6 @@ pipeline {
             steps{
                 echo 'testing app'
             }
-        stages("delopy"){
-            steps{
-                echo 'testing app'
         }
     }
 }
